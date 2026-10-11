@@ -16,7 +16,7 @@
    ============================================================ */
 const SITE_CONFIG = {
   // Your email address (used in contact form mailto link)
-  email: "your.email@example.com",        // <-- REPLACE with your real email
+  email: "aryanwasade@gmail.com",        // <-- REPLACE with your real email
 
   // Social links
   github: "https://github.com/aryanwasade",
@@ -216,7 +216,7 @@ function highlightActiveNav() {
    MOBILE MENU
    ============================================================ */
 function initMobileMenu() {
-  const hamburger  = document.getElementById("hamburger");
+  const hamburger = document.getElementById("hamburger");
   const mobileMenu = document.getElementById("mobile-menu");
   if (!hamburger || !mobileMenu) return;
 
@@ -425,9 +425,9 @@ function initModals() {
 }
 
 function openModal(project) {
-  const overlay   = document.getElementById("modal-overlay");
-  const titleEl   = document.getElementById("modal-title");
-  const bodyEl    = document.getElementById("modal-body");
+  const overlay = document.getElementById("modal-overlay");
+  const titleEl = document.getElementById("modal-title");
+  const bodyEl = document.getElementById("modal-body");
   if (!overlay) return;
 
   // Build key points HTML
@@ -540,15 +540,15 @@ function initContactForm() {
     let valid = true;
 
     const fields = [
-      { id: "contact-name",    label: "Name",    minLen: 2 },
-      { id: "contact-email",   label: "Email",   type: "email" },
+      { id: "contact-name", label: "Name", minLen: 2 },
+      { id: "contact-email", label: "Email", type: "email" },
       { id: "contact-subject", label: "Subject", minLen: 3 },
       { id: "contact-message", label: "Message", minLen: 10 },
     ];
 
     fields.forEach(({ id, label, type, minLen }) => {
-      const input   = document.getElementById(id);
-      const errEl   = document.getElementById(`${id}-error`);
+      const input = document.getElementById(id);
+      const errEl = document.getElementById(`${id}-error`);
       if (!input) return;
 
       const val = input.value.trim();
@@ -575,8 +575,8 @@ function initContactForm() {
     if (!valid) return;
 
     // Build mailto link
-    const name    = document.getElementById("contact-name").value.trim();
-    const email   = document.getElementById("contact-email").value.trim();
+    const name = document.getElementById("contact-name").value.trim();
+    const email = document.getElementById("contact-email").value.trim();
     const subject = document.getElementById("contact-subject").value.trim();
     const message = document.getElementById("contact-message").value.trim();
 
@@ -600,7 +600,7 @@ function initContactForm() {
   });
 
   // Clear error state on input
-  ["contact-name","contact-email","contact-subject","contact-message"].forEach(id => {
+  ["contact-name", "contact-email", "contact-subject", "contact-message"].forEach(id => {
     const input = document.getElementById(id);
     if (!input) return;
     input.addEventListener("input", () => {
