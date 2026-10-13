@@ -126,7 +126,7 @@ const PROJECTS_DATA = [
     title: "Automated Monthly Budget Planning Agent",
     categories: ["web"],
     categoryLabels: ["Web", "Software"],
-    thumbSrc: "assets/project-budget-agent.jpg",
+    thumbSrc: "assets/project-budget-agent.png",
     thumbIcon: "💰",
     thumbAlt: "Budget planning agent project screenshot",
     description:
