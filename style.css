@@ -1236,6 +1236,89 @@ img { display: block; max-width: 100%; }
 .cert-pill:hover { border-color: var(--black); }
 
 /* ============================================================
+   EXPERIENCE CERTIFICATES & MEDIA
+   ============================================================ */
+.exp-entry-inner {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 2.25rem;
+  align-items: start;
+}
+
+.exp-media {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--gray-border);
+  background: var(--white);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.exp-media:hover {
+  transform: translateY(-3px);
+  border-color: var(--black);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+.exp-media-link {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+  overflow: hidden;
+  background: var(--white);
+}
+
+.exp-media-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 11;
+  object-fit: contain;
+  background: var(--white);
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.exp-media:hover .exp-media-img {
+  transform: scale(1.04);
+}
+
+.exp-media-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.exp-media:hover .exp-media-overlay {
+  opacity: 1;
+}
+
+.exp-media-badge {
+  background: var(--white);
+  color: var(--black);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.4rem 0.8rem;
+  border-radius: 2px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.exp-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+/* ============================================================
    BEYOND THE CODE — Section 07
    ============================================================ */
 #beyond {
@@ -1945,6 +2028,9 @@ footer {
 
   .github-banner { flex-direction: column; text-align: center; }
   .github-banner-sub { margin: 0 auto; }
+
+  .exp-entry-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+  .exp-media { max-width: 320px; }
 }
 
 /* ============================================================
